@@ -1,0 +1,9 @@
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+include ~/.config/i3/conf.d/appearance.conf
+include ~/.config/i3/conf.d/keybindings.conf
+include ~/.config/i3/conf.d/startup.conf
+include ~/.config/i3/conf.d/applications.conf
+include ~/.config/i3/conf.d/system/$(hostname).conf
+
+# vim filetype=i3config
