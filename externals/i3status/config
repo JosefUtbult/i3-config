@@ -1,0 +1,49 @@
+general {
+    colors = true
+    interval = 5
+}
+
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+order += "tztime local"
+
+cpu_usage {
+    format = "  %usage"
+}
+
+memory {
+    format = "  %used"
+    threshold_degraded = "10%"
+    format_degraded = "MEM LOW"
+}
+
+disk "/" {
+    format = "   %avail"
+}
+
+wireless _first_ {
+    format_up = "  %quality at %essid"
+    format_down = "睊"
+}
+
+ethernet _first_ {
+    format_up = "󰈀 %ip"
+    format_down = ""
+}
+
+battery all {
+    format = "   %percentage"
+    format_down = ""
+    status_chr = ""
+    status_bat = ""
+    status_unk = ""
+    status_full = ""
+}
+
+tztime local {
+    format = "  %d/%m     %H:%M"
+}
