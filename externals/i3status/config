@@ -27,7 +27,7 @@ disk "/" {
 
 wireless _first_ {
     format_up = "  %quality at %essid"
-    format_down = "睊"
+    format_down = "󱚼"
 }
 
 ethernet _first_ {
