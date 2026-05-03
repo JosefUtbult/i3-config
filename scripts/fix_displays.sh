@@ -5,6 +5,11 @@ for o in $(xrandr | awk '/disconnected/{print $1}'); do
 done
 
 xrandr --output eDP-1 --auto
+
+# Main display
 xrandr --output DP-3-3 --auto --above eDP-1
 
-feh --bg-scale ~/.config/i3/misc/background.jpg
+# Left display
+xrandr --output DP-3-1 --rotate left --auto --left-of DP-3-3
+
+feh --bg-center ~/.config/i3/misc/background.jpg
